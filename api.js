@@ -5,6 +5,7 @@ const getPizzas = require('./handlers/get-pizzas')
 const createOrder = require('./handlers/create-order')
 const updateOrder = require('./handlers/update-order')
 const deleteOrder = require('./handlers/delete-order')
+const saveOrder = require('./handlers/save-order')
 
 api.get('/pizzas', () => {
     return getPizzas()
@@ -13,7 +14,8 @@ api.get('/pizzas/{id}', (request) => {
     return getPizzas(request.pathParams.id)
 }, {error: 404})
 api.post('/orders', (request) => {
-    return createOrder(request.body)
+
+    return saveOrder(request.body)
 }, {
     success: 201,
     error: 400

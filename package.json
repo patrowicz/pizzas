@@ -13,6 +13,7 @@
     "claudia": "^2.13.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.141.0",
     "claudia-api-builder": "^2.5.1",
     "claudia-bot-builder": "^2.15.0"
   }

@@ -1,5 +1,5 @@
 function updateOrder(id,order) {
-    if (!id || !order || !order.pizzaId || !order.address)
+    if (!id || !order || !order.pizza || !order.address)
         throw new Error('To order pizza please provide pizza type and address where pizza should be delivered')
     return {
         message: `Order ${id} was successfully updated`
