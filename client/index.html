@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+    <todo-item       v-for="item in groceryList"
+                     v-bind:todo="item"
+                     v-bind:key="item.id"></todo-item>
+    <input v-model="message">
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
